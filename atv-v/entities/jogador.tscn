@@ -1,0 +1,90 @@
+[gd_scene load_steps=19 format=3]
+
+[ext_resource type="Script" path="res://entities/jogador.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/personagem.png" id="2"]
+
+[sub_resource type="AtlasTexture" id="Atlas_baixo"]
+atlas = ExtResource("2")
+region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_baixo2"]
+atlas = ExtResource("2")
+region = Rect2(16, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_baixo3"]
+atlas = ExtResource("2")
+region = Rect2(32, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_baixo4"]
+atlas = ExtResource("2")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_esq1"]
+atlas = ExtResource("2")
+region = Rect2(0, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_esq2"]
+atlas = ExtResource("2")
+region = Rect2(16, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_esq3"]
+atlas = ExtResource("2")
+region = Rect2(32, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_esq4"]
+atlas = ExtResource("2")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_dir1"]
+atlas = ExtResource("2")
+region = Rect2(0, 32, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_dir2"]
+atlas = ExtResource("2")
+region = Rect2(16, 32, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_dir3"]
+atlas = ExtResource("2")
+region = Rect2(32, 32, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_dir4"]
+atlas = ExtResource("2")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_cima1"]
+atlas = ExtResource("2")
+region = Rect2(0, 48, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_cima2"]
+atlas = ExtResource("2")
+region = Rect2(16, 48, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_cima3"]
+atlas = ExtResource("2")
+region = Rect2(32, 48, 16, 16)
+[sub_resource type="AtlasTexture" id="Atlas_cima4"]
+atlas = ExtResource("2")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jogador"]
+animations = [{
+"frames": [{"duration": 1.0, "texture": SubResource("Atlas_baixo")}, {"duration": 1.0, "texture": SubResource("Atlas_baixo2")}, {"duration": 1.0, "texture": SubResource("Atlas_baixo3")}, {"duration": 1.0, "texture": SubResource("Atlas_baixo4")}],
+"loop": true, "name": &"baixo", "speed": 8.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("Atlas_esq1")}, {"duration": 1.0, "texture": SubResource("Atlas_esq2")}, {"duration": 1.0, "texture": SubResource("Atlas_esq3")}, {"duration": 1.0, "texture": SubResource("Atlas_esq4")}],
+"loop": true, "name": &"esquerda", "speed": 8.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("Atlas_dir1")}, {"duration": 1.0, "texture": SubResource("Atlas_dir2")}, {"duration": 1.0, "texture": SubResource("Atlas_dir3")}, {"duration": 1.0, "texture": SubResource("Atlas_dir4")}],
+"loop": true, "name": &"direita", "speed": 8.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("Atlas_cima1")}, {"duration": 1.0, "texture": SubResource("Atlas_cima2")}, {"duration": 1.0, "texture": SubResource("Atlas_cima3")}, {"duration": 1.0, "texture": SubResource("Atlas_cima4")}],
+"loop": true, "name": &"cima", "speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape_pes"]
+size = Vector2(10, 6)
+
+[node name="Jogador" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jogador")
+animation = &"baixo"
+frame = 0
+centered = true
+position = Vector2(0, -3)
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape_pes")

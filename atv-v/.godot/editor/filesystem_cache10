@@ -1,0 +1,16 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1791418961
+DEVLOG.md::TextFile::-1::1791418879::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1791418879::0::1::::<><><>0<>0<><>::
+::res://entities/::1791418879
+jogador.gd::GDScript::2181429237633189957::1791418879::0::1::::<>CharacterBody2D<><>0<>0<><>::
+jogador.tscn::PackedScene::-1::1791418879::0::1::::<><><>0<>0<><>::res://entities/jogador.gd<>res://sprites/personagem.png
+::res://scenes/::1791418879
+vila.tscn::PackedScene::-1::1791418879::0::1::::<><><>0<>0<><>::res://scripts/vila.gd<>res://entities/jogador.tscn
+::res://scripts/::1791418879
+vila.gd::GDScript::3776898879418931359::1791418879::0::1::::<>Node2D<><>0<>0<><>::
+::res://sprites/::1791418879
+LICENCA-tiny-town.txt::TextFile::-1::1791418879::0::1::::<><><>0<>0<><>::
+personagem.png::CompressedTexture2D::5157263549341059692::1791418879::1791418962::1::::<><><>0<>0<>184df53ed6054cef4137340e714a0add<>res://.godot/imported/personagem.png-a6629aabfbdefb924752dfdcf5c1cfea.ctex::
+tiny-town.png::CompressedTexture2D::7144046411154289305::1791418879::1791418962::1::::<><><>0<>0<>b064f3502c72be2a160b06fbfd0bee8a<>res://.godot/imported/tiny-town.png-d56c28ab3f37f38e13060a8a9aa74ac5.ctex::
+::res://tiles/::1791432964
